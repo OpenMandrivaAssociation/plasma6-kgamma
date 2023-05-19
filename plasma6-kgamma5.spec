@@ -23,6 +23,9 @@ BuildRequires:	cmake(Qt6Gui)
 BuildRequires:	cmake(Qt6Widgets)
 BuildRequires:	pkgconfig(x11)
 BuildRequires:	pkgconfig(xxf86vm)
+BuildRequires:	cmake(KF6Config)
+BuildRequires:	cmake(KF6ConfigWidgets)
+BuildRequires:	cmake(KF6KCMUtils)
 
 %description
 Plasma 6 monitor calibration module.
