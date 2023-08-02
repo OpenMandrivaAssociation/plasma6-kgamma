@@ -1,5 +1,5 @@
 %define stable %([ "`echo %{version} |cut -d. -f3`" -ge 70 ] && echo -n un; echo -n stable)
-%define git 20230726
+%define git 20230802
 
 Name:		plasma6-kgamma5
 Summary:	Plasma 6 monitor calibration module
