@@ -26,8 +26,6 @@ BuildRequires:	pkgconfig(xxf86vm)
 BuildRequires:	cmake(KF6Config)
 BuildRequires:	cmake(KF6ConfigWidgets)
 BuildRequires:	cmake(KF6KCMUtils)
-# Just to avoid pulling in the Plasma 5 version
-BuildRequires:	plasma6-xdg-desktop-portal-kde
 
 %description
 Plasma 6 monitor calibration module.
