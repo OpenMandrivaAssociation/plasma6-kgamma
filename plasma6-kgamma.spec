@@ -26,6 +26,7 @@ BuildRequires:	pkgconfig(xxf86vm)
 BuildRequires:	cmake(KF6Config)
 BuildRequires:	cmake(KF6ConfigWidgets)
 BuildRequires:	cmake(KF6KCMUtils)
+BuildRequires:	gettext
 
 %description
 Plasma 6 monitor calibration module.
