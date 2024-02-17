@@ -1,5 +1,7 @@
 %define stable %([ "$(echo %{version} |cut -d. -f2)" -ge 80 -o "$(echo %{version} |cut -d. -f3)" -ge 80 ] && echo -n un; echo -n stable)
 %define git 20240217
+%define gitbranch Plasma/6.0
+%define gitbranchd %(echo %{gitbranch} |sed -e "s,/,-,g")
 
 Name:		plasma6-kgamma
 Summary:	Plasma 6 monitor calibration module
@@ -9,7 +11,7 @@ Group:		Graphical desktop/KDE
 License:	GPLv2
 URL:		http://www.kde.org
 %if 0%{?git:1}
-Source0:	https://invent.kde.org/plasma/kgamma/-/archive/master/kgamma-master.tar.bz2#/kgamma5-%{git}.tar.bz2
+Source0:	https://invent.kde.org/plasma/kgamma/-/archive/%{gitbranch}/kgamma-%{gitbranchd}.tar.bz2#/kgamma5-%{git}.tar.bz2
 %else
 Source0:	http://download.kde.org/%{stable}/plasma/%(echo %{version} |cut -d. -f1-3)/kgamma-%{version}.tar.xz
 %endif
@@ -42,7 +44,7 @@ Plasma 6 monitor calibration module.
 #----------------------------------------------------------------------
 
 %prep
-%autosetup -p1 -n kgamma-%{?git:master}%{!?git:%{version}}
+%autosetup -p1 -n kgamma-%{?git:%{gitbranchd}}%{!?git:%{version}}
 %cmake \
 	-DBUILD_QCH:BOOL=ON \
 	-DBUILD_WITH_QT6:BOOL=ON \
