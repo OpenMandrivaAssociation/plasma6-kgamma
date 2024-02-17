@@ -1,9 +1,9 @@
 %define stable %([ "$(echo %{version} |cut -d. -f2)" -ge 80 -o "$(echo %{version} |cut -d. -f3)" -ge 80 ] && echo -n un; echo -n stable)
-#define git 20231103
+%define git 20240217
 
 Name:		plasma6-kgamma
 Summary:	Plasma 6 monitor calibration module
-Version:	5.93.0
+Version:	5.94.0
 Release:	%{?git:0.%{git}.}1
 Group:		Graphical desktop/KDE
 License:	GPLv2
