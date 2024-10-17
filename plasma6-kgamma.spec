@@ -9,7 +9,7 @@ Version:	6.2.1
 Release:	%{?git:0.%{git}.}1
 Group:		Graphical desktop/KDE
 License:	GPLv2
-URL:		http://www.kde.org
+URL:		https://www.kde.org
 %if 0%{?git:1}
 Source0:	https://invent.kde.org/plasma/kgamma/-/archive/%{gitbranch}/kgamma-%{gitbranchd}.tar.bz2#/kgamma5-%{git}.tar.bz2
 %else
